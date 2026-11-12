@@ -1,4 +1,14 @@
-/* ===== Japan / Sakura theme ===== */
+/* ===== Japan / Sakura theme =====
+   Contents (search for the "-----" headers):
+     Variables & base   colours, fonts, page background image
+     Nav                sticky top bar, hanko logo, kanji menu labels
+     Hero               photo, name, vertical Japanese text, buttons
+     Sections           About / Skills / Projects panels, chips, cards
+     Contact            centred contact section
+     Footer             seigaiha wave pattern, image credit
+     Falling petals     petal shape + fall/sway animation
+     Responsive         tablet / phone tweaks
+*/
 :root {
   --sumi: #14111a;          /* ink black */
   --washi: #fbf6f1;         /* rice-paper white */
@@ -18,7 +28,7 @@ body {
   background-color: var(--sumi);
   background-image:
     linear-gradient(180deg, rgba(20,17,26,.45) 0%, rgba(20,17,26,.78) 55%, rgba(20,17,26,.92) 100%),
-    url('assets/sakura-bg-hakodate.jpg');
+    url('../assets/images/backgrounds/sakura-bg-hakodate.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -127,6 +137,12 @@ section p { color: var(--muted); max-width: 760px; margin-bottom: 1.2rem; }
 .tags { display: flex; flex-wrap: wrap; gap: .4rem; list-style: none; margin-bottom: 1rem; }
 .tags li { font-size: .75rem; padding: .2rem .6rem; border-radius: 999px; background: rgba(200,16,46,.25); color: var(--sakura); }
 
+/* ----- Contact (centred) ----- */
+#contact { text-align: center; }
+#contact h2 { align-items: center; }
+#contact p { margin-left: auto; margin-right: auto; }
+#contact .cta { justify-content: center; }
+
 /* ----- Footer with seigaiha wave pattern ----- */
 footer { text-align: center; color: var(--muted); background: var(--sumi); padding-bottom: 2rem; }
 .seigaiha {
@@ -164,9 +180,3 @@ footer { text-align: center; color: var(--muted); background: var(--sumi); paddi
   .cta { justify-content: center; }
   .photo-wrap img, .photo-fallback { width: 190px; height: 190px; }
 }
-
-/* ----- Centered contact section ----- */
-#contact { text-align: center; }
-#contact h2 { align-items: center; }
-#contact p { margin-left: auto; margin-right: auto; }
-#contact .cta { justify-content: center; }
