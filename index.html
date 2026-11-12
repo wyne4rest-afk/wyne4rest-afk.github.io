@@ -6,28 +6,32 @@
   <title>Fred Jesus G. Heruela | Portfolio</title>
   <meta name="description" content="Portfolio of Fred Jesus G. Heruela" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <nav class="nav">
-    <a href="#" class="logo">FJH</a>
+    <a href="#" class="logo" aria-label="Home"><span class="hanko">FJH</span></a>
     <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about"><small>私</small>About</a></li>
+      <li><a href="#skills"><small>技</small>Skills</a></li>
+      <li><a href="#projects"><small>作</small>Projects</a></li>
+      <li><a href="#contact"><small>連</small>Contact</a></li>
     </ul>
   </nav>
 
+  <div class="petals" aria-hidden="true"></div>
+
   <header class="hero">
+    <div class="vertical-jp" aria-hidden="true">桜咲く・夢を形に</div>
     <div class="photo-wrap">
       <img src="assets/profile.jpg" alt="Fred Jesus G. Heruela"
            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
       <div class="photo-fallback">FJH</div>
     </div>
     <div>
-      <p class="hello">Hi, I'm</p>
+      <p class="hello"><span lang="ja">こんにちは</span> &mdash; Hi, I'm</p>
       <h1>Fred Jesus G. Heruela</h1>
       <p class="tagline">C++ Developer &middot; Linux Enthusiast &middot; Analytical Problem Solver</p>
       <div class="cta">
@@ -39,7 +43,7 @@
 
   <main>
     <section id="about">
-      <h2>About Me</h2>
+      <h2><span class="kanji" lang="ja">私について</span>About Me</h2>
       <p>
         I'm Fred Jesus G. Heruela, a developer from the Philippines who likes turning math and
         analysis into tools people can actually use. I build desktop applications and games in
@@ -54,14 +58,14 @@
     </section>
 
     <section id="skills">
-      <h2>Skills</h2>
+      <h2><span class="kanji" lang="ja">技術</span>Skills</h2>
       <div class="chips">
         <span>C++17</span><span>SFML 3</span><span>CMake</span><span>Object-Oriented Design</span><span>Applied Math &amp; Optimization</span><span>Game Development</span><span>Arch Linux</span><span>i3 Window Manager</span><span>Neovim (LazyVim)</span><span>Git &amp; GitHub</span><span>HTML &amp; CSS</span><span>GIMP</span>
       </div>
     </section>
 
     <section id="projects">
-      <h2>Projects</h2>
+      <h2><span class="kanji" lang="ja">作品</span>Projects</h2>
       <div class="grid">
         <article class="card">
           <img class="thumb" src="assets/projects/seagregate.jpg" alt="SEAgregate screenshot" loading="lazy" />
@@ -103,7 +107,7 @@
     </section>
 
     <section id="contact">
-      <h2>Contact</h2>
+      <h2><span class="kanji" lang="ja">連絡</span>Contact</h2>
       <p>Open to opportunities and collaborations. Let's connect!</p>
       <div class="cta">
         <a class="btn primary" href="mailto:wyne.4rest@gmail.com">Email Me</a>
@@ -113,7 +117,31 @@
     </section>
   </main>
 
-  <footer>&copy; <span id="year"></span> Fred Jesus G. Heruela</footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <footer>
+    <div class="seigaiha" aria-hidden="true"></div>
+    <p class="footer-jp" lang="ja">ありがとうございます</p>
+    <p>&copy; <span id="year"></span> Fred Jesus G. Heruela</p>
+    <p class="credit">Background: <a href="https://commons.wikimedia.org/wiki/File:Rail_tracks_and_cherry_trees_in_Ashino_Park.jpg" target="_blank" rel="noopener">Rail tracks and cherry trees in Ashino Park</a>
+      by 掬茶, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>, via Wikimedia Commons (resized)</p>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Falling sakura petals (skipped for users who prefer reduced motion)
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const box = document.querySelector('.petals');
+      const count = window.innerWidth < 640 ? 12 : 24;
+      for (let i = 0; i < count; i++) {
+        const p = document.createElement('span');
+        const size = 8 + Math.random() * 10;
+        p.style.left = Math.random() * 100 + 'vw';
+        p.style.width = size + 'px';
+        p.style.height = size * 0.8 + 'px';
+        p.style.animationDuration = 9 + Math.random() * 10 + 's, ' + (3 + Math.random() * 3) + 's';
+        p.style.animationDelay = -Math.random() * 18 + 's, 0s';
+        p.style.opacity = 0.5 + Math.random() * 0.5;
+        box.appendChild(p);
+      }
+    }
+  </script>
 </body>
 </html>
