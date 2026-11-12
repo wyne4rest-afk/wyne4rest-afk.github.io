@@ -29,7 +29,7 @@
     <div>
       <p class="hello">Hi, I'm</p>
       <h1>Fred Jesus G. Heruela</h1>
-      <p class="tagline">Aspiring Developer &middot; Problem Solver &middot; Lifelong Learner</p>
+      <p class="tagline">C++ Developer &middot; Linux Enthusiast &middot; Analytical Problem Solver</p>
       <div class="cta">
         <a href="#projects" class="btn primary">View My Work</a>
         <a href="#contact" class="btn">Get in Touch</a>
@@ -41,17 +41,22 @@
     <section id="about">
       <h2>About Me</h2>
       <p>
-        I'm Fred Jesus G. Heruela, a motivated individual passionate about technology
-        and building things that make a difference. I enjoy learning new tools,
-        collaborating with others, and turning ideas into working solutions.
+        I'm Fred Jesus G. Heruela, a developer from the Philippines who likes turning math and
+        analysis into tools people can actually use. I build desktop applications and games in
+        <strong>C++17</strong> with <strong>SFML 3</strong>, from a cost optimiser that finds the
+        cheapest container shape for a given volume to an educational game about waste segregation.
+      </p>
+      <p>
+        Outside of code I run a hand-tuned <strong>Arch Linux</strong> setup with i3 and Neovim, and
+        I apply the same analytical approach to everyday problems, like working out and costing my
+        own DIY cleaning product formulas.
       </p>
     </section>
 
     <section id="skills">
       <h2>Skills</h2>
       <div class="chips">
-        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Git &amp; GitHub</span>
-        <span>Linux</span><span>Problem Solving</span><span>Teamwork</span><span>Communication</span>
+        <span>C++17</span><span>SFML 3</span><span>CMake</span><span>Object-Oriented Design</span><span>Applied Math &amp; Optimization</span><span>Game Development</span><span>Arch Linux</span><span>i3 Window Manager</span><span>Neovim (LazyVim)</span><span>Git &amp; GitHub</span><span>HTML &amp; CSS</span><span>GIMP</span>
       </div>
     </section>
 
@@ -59,19 +64,40 @@
       <h2>Projects</h2>
       <div class="grid">
         <article class="card">
-          <h3>Personal Portfolio</h3>
-          <p>This responsive website, built with HTML and CSS and hosted on GitHub Pages.</p>
-          <a href="https://github.com/wyne4rest-afk" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+          <img class="thumb" src="assets/projects/seagregate.jpg" alt="SEAgregate screenshot" loading="lazy" />
+          <div class="card-body">
+            <h3>SEAgregate</h3>
+            <p>A 2D waste-segregation game. Sort trash bags into biodegradable, non-biodegradable, recyclable and hazardous bins across Lake, River and Ocean levels before the timer runs out.</p>
+            <ul class="tags"><li>C++17</li><li>SFML 3</li><li>CMake</li></ul>
+            <a href="https://github.com/wyne4rest-afk/sfml-created-applications/tree/main/Ocean%20Game" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+          </div>
         </article>
         <article class="card">
-          <h3>Project Two</h3>
-          <p>A short description of another project you're proud of.</p>
-          <a href="https://github.com/wyne4rest-afk" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+          <div class="thumb icon">&#x1F4E6;</div>
+          <div class="card-body">
+            <h3>VolUX: Cost Optimiser</h3>
+            <p>A desktop app that finds the cheapest dimensions for a closed box or cylinder of a given volume. It draws the result to scale beside a 1-metre stick and saves records you can browse and delete.</p>
+            <ul class="tags"><li>C++17</li><li>SFML 3</li><li>Optimization</li></ul>
+            <a href="https://github.com/wyne4rest-afk/sfml-created-applications/tree/main/VolUX" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+          </div>
         </article>
         <article class="card">
-          <h3>Project Three</h3>
-          <p>A short description of what you built and the tools you used.</p>
-          <a href="https://github.com/wyne4rest-afk" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+          <div class="thumb icon">&#x1F427;</div>
+          <div class="card-body">
+            <h3>Arch Linux Dotfiles</h3>
+            <p>My daily-driver Linux configuration: i3 with i3status-rust (Gruvbox theme), Neovim on LazyVim, Alacritty, tint2, Thunar, cmus and GIMP.</p>
+            <ul class="tags"><li>Linux</li><li>i3</li><li>Neovim</li></ul>
+            <a href="https://github.com/wyne4rest-afk/archlinux-dotfiles-daily" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb icon">&#x1F9EA;</div>
+          <div class="card-body">
+            <h3>HomeStuff</h3>
+            <p>Researched DIY formulas for car shampoo, dishwashing liquid and laundry detergent, with pH targets, an ingredient-swap analysis and a costed shopping guide in Philippine pesos.</p>
+            <ul class="tags"><li>Research</li><li>Analysis</li><li>Documentation</li></ul>
+            <a href="https://github.com/wyne4rest-afk/HomeStuff" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+          </div>
         </article>
       </div>
     </section>
