@@ -18,7 +18,7 @@ body {
   background-color: var(--sumi);
   background-image:
     linear-gradient(180deg, rgba(20,17,26,.45) 0%, rgba(20,17,26,.78) 55%, rgba(20,17,26,.92) 100%),
-    url('assets/sakura-bg.jpg');
+    url('assets/sakura-bg-hakodate.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
