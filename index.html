@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fred Jesus G. Heruela | Portfolio</title>
+  <meta name="description" content="Portfolio of Fred Jesus G. Heruela" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="nav">
+    <a href="#" class="logo">FJH</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <div class="photo-wrap">
+      <img src="assets/profile.jpg" alt="Fred Jesus G. Heruela"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+      <div class="photo-fallback">FJH</div>
+    </div>
+    <div>
+      <p class="hello">Hi, I'm</p>
+      <h1>Fred Jesus G. Heruela</h1>
+      <p class="tagline">Aspiring Developer &middot; Problem Solver &middot; Lifelong Learner</p>
+      <div class="cta">
+        <a href="#projects" class="btn primary">View My Work</a>
+        <a href="#contact" class="btn">Get in Touch</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I'm Fred Jesus G. Heruela, a motivated individual passionate about technology
+        and building things that make a difference. I enjoy learning new tools,
+        collaborating with others, and turning ideas into working solutions.
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="chips">
+        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Git &amp; GitHub</span>
+        <span>Linux</span><span>Problem Solving</span><span>Teamwork</span><span>Communication</span>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Personal Portfolio</h3>
+          <p>This responsive website, built with HTML and CSS and hosted on GitHub Pages.</p>
+          <a href="https://github.com/wyne4rest-afk" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+        </article>
+        <article class="card">
+          <h3>Project Two</h3>
+          <p>A short description of another project you're proud of.</p>
+          <a href="https://github.com/wyne4rest-afk" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+        </article>
+        <article class="card">
+          <h3>Project Three</h3>
+          <p>A short description of what you built and the tools you used.</p>
+          <a href="https://github.com/wyne4rest-afk" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Open to opportunities and collaborations. Let's connect!</p>
+      <div class="cta">
+        <a class="btn primary" href="mailto:wyne.4rest@gmail.com">Email Me</a>
+        <a class="btn" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/wyne4rest-afk" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>&copy; <span id="year"></span> Fred Jesus G. Heruela</footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
